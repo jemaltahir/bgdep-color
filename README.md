@@ -24,6 +24,35 @@
    cd bgdep-color
    ```
 
+2. Build the container image using Podman:
+
+   ```bash
+   podman build -t fastapi-deploy-info-app .
+   ```
+
+### Running the Application
+
+You can run the application with different background colors by passing the `BACKGROUND_COLOR` environment variable.
+
+#### Example 1: Blue Deployment
+
 ```bash
-podman build -t bgdep-color .
+podman run -d -p 8080:8080 --env BACKGROUND_COLOR="blue" fastapi-deploy-info-app
 ```
+
+This command runs the application on port `8080` with a blue background.
+
+#### Example 2: Yellow Deployment
+
+```bash
+podman run -d -p 8081:8080 --env BACKGROUND_COLOR="yellow" fastapi-deploy-info-app
+```
+
+This command runs the application on port `8081` with a yellow background.
+
+### Accessing the Application
+
+After running the containers, you can access the application in your browser:
+
+- For the blue deployment: `http://localhost:8080`
+- For the yellow deployment: `http://localhost:8081`
