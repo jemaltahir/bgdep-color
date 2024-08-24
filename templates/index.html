@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Information</title>
+    <style>
+        body {
+            background-color: {{ background_color }};
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>System Information</h1>
+    <p><strong>Local IP:</strong> {{ local_ip }}</p>
+    <p><strong>Local Port:</strong> {{ local_port }}</p>
+    <p><strong>Remote IP:</strong> {{ remote_ip }}</p>
+    <p><strong>Remote Port:</strong> {{ remote_port }}</p>
+    <p><strong>Connection ID:</strong> {{ connection_id }}</p>
+    <p><strong>Request Host:</strong> {{ request_host }}</p>
+    <p><strong>Request Path:</strong> {{ request_path }}</p>
+    <p><strong>Arch:</strong> {{ arch }}</p>
+    <p><strong>RID:</strong> {{ rid }}</p>
+    <p><strong>Framework:</strong> {{ framework }}</p>
+    <p><strong>Hostname:</strong> {{ hostname }}</p>
+</body>
+</html>
